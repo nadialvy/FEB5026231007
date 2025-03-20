@@ -6,6 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="./styles.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -24,104 +25,203 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <main style="height: 100vh">
+    <main
+      style="height: 100vh"
+      class="d-flex justify-content-start align-items-start"
+    >
       <div
-        class="d-flex flex-column h-100 flex-shrink-0 p-3 text-white bg-dark"
-        style="width: 280px"
+        class="d-flex flex-column h-100 flex-shrink-0 p-4 text-white border"
+        style="width: 280px; background-color: #4b759e"
       >
-        <!-- <a
-          href="/"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
-        >
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap"></use>
-          </svg>
-          <span class="fs-4">Sidebar</span>
-        </a> -->
-        <div class="d-flex align-items-center justify-content-start border">
+        <div class="d-flex justify-content-end mb-4">
           <img
-            src="/assets/profile.avif"
-            alt="profile pict"
-            class="rounded-circle"
-            width="50"
-            height="50"
+            src="./assets/bar.svg"
+            alt="menu"
+            width="20"
+            height="20"
+            class="mr-2"
           />
-          <div>
-            <p>Admin</p>
-            <p>admin@gmail.com</p>
-          </div>
         </div>
-        <hr />
-        <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">
-              <svg class="bi me-2" width="16" height="16">
-                <use xlink:href="#home"></use>
-              </svg>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16">
-                <use xlink:href="#speedometer2"></use>
-              </svg>
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16">
-                <use xlink:href="#table"></use>
-              </svg>
-              Orders
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16">
-                <use xlink:href="#grid"></use>
-              </svg>
-              Products
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link text-white">
-              <svg class="bi me-2" width="16" height="16">
-                <use xlink:href="#people-circle"></use>
-              </svg>
-              Customers
-            </a>
-          </li>
-        </ul>
-        <hr />
-        <div class="dropdown">
-          <a
-            href="#"
-            class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-            id="dropdownUser1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+        <div class="h-75 d-flex flex-column justify-content-between">
+          <div class="">
+            <div class="d-flex align-items-center justify-content-start gap-4">
+              <img
+                src="/assets/profile.avif"
+                alt="profile pict"
+                class="rounded-circle mr-2"
+                width="50"
+                height="50"
+              />
+              <div>
+                <p class="mb-0">Admin</p>
+                <p class="mb-0">admin@gmail.com</p>
+              </div>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-start mt-4 mb-3"
+            >
+              <img
+                src="./assets/file.svg"
+                alt="file.svg"
+                width="20"
+                height="20"
+                class="mr-2"
+              />
+              <p class="mb-0">Helperlog</p>
+            </div>
+            <div
+              class="d-flex align-items-center justify-content-start mt-4 mb-3"
+            >
+              <img
+                src="./assets/search.svg"
+                alt="file.svg"
+                width="20"
+                height="20"
+                class="mr-2"
+              />
+              <p class="mb-0">Helperfind</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn border border-secondary btn-primary d-flex align-items-center justify-content-start border-0 button-logout"
+            style="background-color: #a1bcd8"
           >
             <img
-              src="https://github.com/mdo.png"
-              alt=""
-              width="32"
-              height="32"
-              class="rounded-circle me-2"
+              src="./assets/logout.svg"
+              alt="logout"
+              width="20"
+              height="20"
+              class="mr-2"
             />
-            <strong>mdo</strong>
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-dark text-small shadow"
-            aria-labelledby="dropdownUser1"
+            <p class="mb-0">Log Out</p>
+          </button>
+        </div>
+      </div>
+      <div
+        class="h-100 w-75 d-flex flex-column justify-content-start align-items-start mx-auto"
+        style="
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+        "
+      >
+        <div class="w-100 d-flex justify-content-start align-items-center">
+          <img
+            src="./assets/arrow-left.svg"
+            alt="arrow-left"
+            class="mr-2"
+            width="20"
+            height="20"
+          />
+          <h4 class="mb-0 font-weight-bold">Detail PRT</h4>
+        </div>
+        <div
+          class="d-flex justify-content-start align-items-start w-100"
+          style="height: 100vh"
+        >
+          <div class="w-50 p-3">
+            <img
+              src="./assets/gimyung.webp"
+              alt="gimyung cuamiku"
+              class="img-fluid rounded border"
+              style="width: 100%; height: 440px; object-fit: cover"
+            />
+          </div>
+          <div class="w-50 p-3 d-flex flex-column justify-content-around h-100">
+            <div>
+              <h4 class="mb-0 font-weight-bold">Kim Gimyung</h4>
+              <p class="mb-0">Mafia</p>
+            </div>
+
+            <!-- card -->
+            <div
+              class="border rounded d-flex justify-content-center align-items-center p-2 mt-3"
+            >
+              <div
+                class="d-flex w-50 justify-content-center align-items-center flex-column"
+              >
+                <h5 class="mb-0 font-weight-bold">4</h5>
+                <p class="mb-0">Tahun Pengalaman</p>
+              </div>
+              <div
+                class="border mx-2"
+                style="height: 60px; background-color: #a1bcd8"
+              ></div>
+              <div
+                class="d-flex w-50 justify-content-center align-items-center flex-column"
+              >
+                <div class="d-flex justify-content-center align-items-center">
+                  <img
+                    src="./assets/star.svg"
+                    alt="star"
+                    width="20"
+                    height="20"
+                    class="mr-2"
+                  />
+                  <h5 class="font-weight-bold mb-0">4.6</h5>
+                </div>
+                <p class="mb-0">Rating</p>
+              </div>
+            </div>
+
+            <!-- horizontal line -->
+            <div
+              class="border"
+              style="height: 2px; background-color: #a1bcd8"
+            ></div>
+
+            <!-- biodata card -->
+            <div class="border rounded">
+              <div class="rounded p-2" style="background-color: #b5bdc6">
+                <p class="font-weight-bold ml-4 mb-0">Biodata</p>
+              </div>
+              <div class="d-flex justify-content-start align-items-start p-2">
+                <div class="w-25">
+                  <p class="mb-0">Keahlian 1</p>
+                  <p class="mb-0">Keahlian 2</p>
+                  <p class="mb-0">Keahlian 3</p>
+                  <p class="mb-0">Keahlian 4</p>
+                </div>
+                <div class="w-75">
+                  <p class="mb-0">: Memasak</p>
+                  <p class="mb-0">: Berkelahi</p>
+                  <p class="mb-0">: Mencuci Baju</p>
+                  <p class="mb-0">: -</p>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary w-100">
+              Edit Data
+            </button>
+          </div>
+        </div>
+        <div class="d-flex justify-content-start align-items-start w-100">
+          <div
+            class="w-50 rounded d-flex justify-content-start align-items-start"
           >
-            <li><a class="dropdown-item" href="#">New project...</a></li>
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Sign out</a></li>
-          </ul>
+            <img
+              src="./assets/gimyung-1.jpg"
+              alt="gimyung 1"
+              class="rounded border"
+              style="width: 25%; height: 200px; object-fit: cover"
+            />
+            <img
+              src="./assets/gimyung-2.jpg"
+              alt="gimyung 1"
+              width="100"
+              class="mx-4 border rounded"
+              style="width: 25%; height: 200px; object-fit: cover"
+            />
+            <img
+              src="./assets/gimyung-3.jpg"
+              alt="gimyung 1"
+              width="100"
+              class="rounded border"
+              style="width: 25%; height: 200px; object-fit: cover"
+            />
+          </div>
         </div>
       </div>
     </main>
