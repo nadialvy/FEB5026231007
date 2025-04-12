@@ -41,8 +41,27 @@
       </video>
       <div
         class="position-relative px-2 flex-column z-index-1 d-flex justify-content-center align-items-start mx-auto py-5"
-        style="max-width: 580px"
+        style="max-width: 580px; margin: auto"
       >
+        <!-- setting button -->
+        <div
+          id="settingButton"
+          class="d-flex justify-content-center align-items-center rounded-circle"
+          style="
+            top: 16px;
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            z-index: 999;
+          "
+        >
+          <img
+            src="./assets/sabrina-carpenter/icon/kebab-menu.svg"
+            alt="kebab"
+            style="width: 10px; height: 10px; transform: rotate(90deg)"
+          />
+        </div>
+
         <div
           class="d-flex flex-column w-100 justify-content-center align-items-center"
         >
@@ -232,6 +251,7 @@
 
           <!--nav section -->
           <nav
+            id="stopNav"
             class="d-flex my-4 align-items-center justify-content-between"
             style="background-color: #efeeea; border-radius: 100px"
             data-aos="zoom-out"
@@ -1046,6 +1066,7 @@
     </section>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // === Merch Scroll Logic ===
         const wrapper = document.querySelector(".merch-items");
         const items = document.querySelectorAll(".merch-item");
         const prevBtn = document.querySelector(".prev-btn");
@@ -1054,7 +1075,6 @@
         let currentPosition = 0;
         const itemWidth = items[0].offsetWidth + 24;
         const visibleItems = 3;
-        // maxPosition = angka paling negative yang boleh dicapai (item paling kanan)
         const maxPosition = -(items.length - visibleItems) * itemWidth;
 
         function updateButtons() {
@@ -1065,7 +1085,7 @@
 
         nextBtn.addEventListener("click", () => {
           if (currentPosition > maxPosition) {
-            currentPosition -= itemWidth; //dikurangin, karena geser ke kiri
+            currentPosition -= itemWidth;
             wrapper.style.transform = `translateX(${currentPosition}px)`;
             updateButtons();
           }
@@ -1080,8 +1100,30 @@
         });
 
         updateButtons();
+
+        // === Sticky Setting Button Scroll Stop ===
+        const button = document.getElementById("settingButton");
+        const stopPoint = document.getElementById("stopNav");
+
+        function handleScroll() {
+          const navTop = stopPoint.getBoundingClientRect().top;
+          const buttonHeight = button.offsetHeight;
+
+          if (navTop <= buttonHeight + 16) {
+            // Fade out only
+            button.style.opacity = "0";
+            button.style.pointerEvents = "none";
+          } else {
+            // Fade in
+            button.style.opacity = "1";
+            button.style.pointerEvents = "auto";
+          }
+        }
+
+        window.addEventListener("scroll", handleScroll);
       });
     </script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

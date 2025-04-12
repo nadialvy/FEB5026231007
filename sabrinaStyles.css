@@ -65,4 +65,39 @@ a {
   gap: 12px;
 }
 
+.rotate-90 {
+  transform: rotate(90deg);
+}
 
+#settingButton {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 0.6s ease;
+}
+
+#settingButton:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#settingButton {
+  right: 16px;
+  transition: opacity 0.3s ease;
+}
+
+@media (min-width: 605px) {
+  #settingButton {
+    right: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  #settingButton {
+    right: 22%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #settingButton {
+    right: 27%;
+  }
+}
