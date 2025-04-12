@@ -38,3 +38,26 @@ body {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
+
+a {
+  text-decoration: none !important;
+}
+
+.truncate-2-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.social-media-scale-animation {
+  display: inline-block; /* <== WAJIB biar transform bisa kerja benar */
+  transition: transform 0.3s ease;
+}
+
+.social-media-scale-animation:hover {
+  transform: scale(1.2);
+}
+
