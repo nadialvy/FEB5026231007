@@ -20,8 +20,8 @@ body {
 }
 
 .interactive-card:hover {
-  top: 8px;
-  left: 8px;
+  top: 6px;
+  left: 4px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -60,4 +60,9 @@ a {
 .social-media-scale-animation:hover {
   transform: scale(1.2);
 }
+
+.gap-wrap {
+  gap: 12px;
+}
+
 
