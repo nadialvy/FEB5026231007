@@ -84,6 +84,16 @@ a {
   transition: opacity 0.3s ease;
 }
 
+#navShop:hover,
+#navLinks:hover {
+  cursor: pointer !important;
+}
+
+#navShop,
+#navLinks {
+  transition: background-color 0.3s ease;
+}
+
 @media (min-width: 605px) {
   #settingButton {
     right: 10%;
